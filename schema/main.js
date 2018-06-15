@@ -1,8 +1,8 @@
-import {
+const {
     GraphQLSchema,
     GraphQLObjectType,
     GraphQLString
-} from 'graphql';
+} = require('graphql');
 
 const queryType = new GraphQLObjectType({
     name: 'RootQuery',
@@ -19,4 +19,4 @@ const mySchema = new GraphQLSchema({
     query: queryType
 });
 
-export default mySchema;
+module.exports = mySchema;
