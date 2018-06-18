@@ -16,7 +16,8 @@ MongoClient.connect(MONGO_URL, (err, client) => {
     const db = client.db('test');
     app.use('/graphql', graphqlHTTP({
         schema: mySchema,
-        context: { db }
+        context: { db },
+        graphiql: true
     }));
 
     app.listen(3000, () => console.log('Running Express.js on port 3000'));
